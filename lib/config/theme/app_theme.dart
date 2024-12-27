@@ -12,6 +12,7 @@ AppBarTheme appBarTheme() {
       color: Colors.white,
       elevation: 0,
       centerTitle: true,
-      iconTheme: IconThemeData(color: Color(0XFFFFFF88)),
-      titleTextStyle: TextStyle(color: Color(0XFFFFFF8B), fontSize: 18));
+      iconTheme: IconThemeData(color: Color.fromARGB(255, 37, 37, 37)),
+      titleTextStyle:
+          TextStyle(color: Color.fromARGB(255, 75, 75, 75), fontSize: 18));
 }

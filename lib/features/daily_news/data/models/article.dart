@@ -26,14 +26,14 @@ class ArticleModel extends ArticleEntities {
 
   factory ArticleModel.fromJson(Map<String, dynamic> map) {
     return ArticleModel(
-      author: map['author'] ?? " ",
-      title: map['title'] ?? " ",
-      description: map['description'] ?? " ",
-      url: map['url'] ?? " ",
+      author: map['author'] ?? "",
+      title: map['title'] ?? "",
+      description: map['description'] ?? "",
+      url: map['url'] ?? "",
       urlToImage: map['urlToImage'] ??
           "https://th.bing.com/th/id/OIP.8FRBs3nSEcnmSNDn3YnSmAHaHa?rs=1&pid=ImgDetMain",
-      publishedAt: map['publishedAt'] ?? " ",
-      content: map['content'] ?? " ",
+      publishedAt: map['publishedAt'] ?? "",
+      content: map['content'] ?? "",
     );
   }
   factory ArticleModel.fromEntity(ArticleEntities entity) {
