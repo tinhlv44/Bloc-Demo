@@ -94,7 +94,7 @@ class _$AppDatabase extends AppDatabase {
       },
       onCreate: (database, version) async {
         await database.execute(
-            'CREATE TABLE IF NOT EXISTS `article` (`id` INTEGER, `author` TEXT, `title` TEXT, `description` TEXT, `url` TEXT, `urlToImage` TEXT, `publishedAt` TEXT, `content` TEXT, PRIMARY KEY (`id`))');
+            'CREATE TABLE IF NOT EXISTS `article` (`id` INTEGER, `author` TEXT, `title` TEXT, `description` TEXT, `url` TEXT, `urlToImage` TEXT, `publishedAt` TEXT, `content` TEXT, PRIMARY KEY (`title`))');
 
         await callback?.onCreate?.call(database, version);
       },
@@ -103,6 +103,6 @@ class _$AppDatabase extends AppDatabase {
   }
 
   @override
-  // TODO: implement articleDAO
-  ArticleDao get articleDAO => throw UnimplementedError();
+  // TODO: implement articleDao
+  ArticleDao get articleDao => throw UnimplementedError();
 }

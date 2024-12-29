@@ -295,7 +295,7 @@ packages:
     source: hosted
     version: "1.5.0"
   floor_annotation:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: floor_annotation
       sha256: a40949580a7ab0eee572686e2d3b1638fd6bd6a753e661d792ab4236b365b23b

@@ -25,11 +25,19 @@ class ArticleCard extends StatelessWidget {
             if (article.urlToImage != null && article.urlToImage!.isNotEmpty)
               ClipRRect(
                 borderRadius: BorderRadius.circular(12),
-                child: Image.network(
-                  article.urlToImage!,
+                child: FadeInImage.assetNetwork(
+                  placeholder:
+                      'assets/images/placeholder_image.jpg', // Hình ảnh thay thế
+                  image: article.urlToImage!,
                   width: double.infinity,
                   height: 200,
                   fit: BoxFit.cover,
+                  imageErrorBuilder: (context, error, stackTrace) {
+                    // Hiển thị khi có lỗi tải ảnh
+                    return Center(
+                      child: Icon(Icons.error, size: 200, color: Colors.red),
+                    );
+                  },
                 ),
               ),
             SizedBox(height: 12),

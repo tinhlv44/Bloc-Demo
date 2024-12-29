@@ -1,5 +1,6 @@
 import 'package:bloc_app_demo/features/daily_news/presentation/bloc/article.dart/remote/remote_article_bloc.dart';
 import 'package:bloc_app_demo/features/daily_news/presentation/bloc/article.dart/remote/remote_article_state.dart';
+import 'package:bloc_app_demo/features/daily_news/presentation/pages/save_news/save_news.dart';
 import 'package:bloc_app_demo/features/daily_news/presentation/widgets/acticle_title.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -11,17 +12,29 @@ class DailyNews extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: _buildAppBar(),
+      appBar: _buildAppBar(context),
       body: _buildBody(),
     );
   }
 
-  _buildAppBar() {
+  _buildAppBar(BuildContext context) {
     return AppBar(
       title: Text(
         "Daily News",
         style: TextStyle(color: Colors.black),
       ),
+      actions: [
+        IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => SaveNews(),
+                ),
+              );
+            },
+            icon: Icon(Icons.save))
+      ],
     );
   }
 

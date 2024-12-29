@@ -2,7 +2,7 @@
 import 'package:bloc_app_demo/features/daily_news/domain/entities/article.dart';
 import 'package:floor/floor.dart';
 
-@Entity(tableName: 'article', primaryKeys: ['id'])
+@Entity(tableName: 'article', primaryKeys: ['title'])
 class ArticleModel extends ArticleEntities {
   const ArticleModel({
     int? id,

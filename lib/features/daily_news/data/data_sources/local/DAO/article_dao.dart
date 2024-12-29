@@ -3,7 +3,7 @@ import 'package:floor/floor.dart';
 
 @dao
 abstract class ArticleDao {
-  @Insert()
+  @insert
   Future<void> insertArticle(ArticleModel articleModel);
   @delete
   Future<void> deleteArticle(ArticleModel articleModel);
